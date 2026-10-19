@@ -59,11 +59,15 @@ public class Guesser{
    * the player.
    */
   private String getReply(){
-    String reply = null;
+    String reply = System.console().readLine("Skriv T eller F: ");
+
+    while (!"T".equals(reply) && !"F".equals(reply)) {
+	System.out.println("Ogiltigt svar. Du måste skriva T eller F.");
     // Write code here which reads a String from the console.
     // As long as it is not a valid reply (one of "T" and "F")
     // write an error message, and read a new reply.
     // When you have gotten a valid reply, return it.
+
     return reply;
   }
 
